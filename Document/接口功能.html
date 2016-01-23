@@ -1,0 +1,2304 @@
+
+	    <html>
+	      <head>
+				  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	        <title>接口功能</title>
+					
+					<link href="toc/style/github-bf51422f4bb36427d391e4b75a1daa083c2d840e.css" media="all" rel="stylesheet" type="text/css"/>
+					<link href="toc/style/github2-d731afd4f624c99a4b19ad69f3083cd6d02b81d5.css" media="all" rel="stylesheet" type="text/css"/>
+					<link href="toc/css/zTreeStyle/zTreeStyle.css" media="all" rel="stylesheet" type="text/css"/>
+			
+				  <style>
+					pre {
+					    counter-reset: line-numbering;
+					    border: solid 1px #d9d9d9;
+					    border-radius: 0;
+					    background: #fff;
+					    padding: 0;
+					    line-height: 23px;
+					    margin-bottom: 30px;
+					    white-space: pre;
+					    overflow-x: auto;
+					    word-break: inherit;
+					    word-wrap: inherit;
+					}
+
+					pre a::before {
+					  content: counter(line-numbering);
+					  counter-increment: line-numbering;
+					  padding-right: 1em; /* space after numbers */
+					  width: 25px;
+					  text-align: right;
+					  opacity: 0.7;
+					  display: inline-block;
+					  color: #aaa;
+					  background: #eee;
+					  margin-right: 16px;
+					  padding: 2px 10px;
+					  font-size: 13px;
+					  -webkit-touch-callout: none;
+					  -webkit-user-select: none;
+					  -khtml-user-select: none;
+					  -moz-user-select: none;
+					  -ms-user-select: none;
+					  user-select: none;
+					}
+
+					pre a:first-of-type::before {
+					  padding-top: 10px;
+					}
+
+					pre a:last-of-type::before {
+					  padding-bottom: 10px;
+					}
+
+					pre a:only-of-type::before {
+					  padding: 10px;
+					}
+			
+					.highlight { background-color: #ffffcc } /* RIGHT */
+					</style>
+	      </head>
+	      <body>
+				  <div>
+							<div style='width:25%;'>
+									<ul id="tree" class="ztree" style='width:100%'>
+		
+									</ul>
+							</div>
+			        <div id='readme' style='width:70%;margin-left:20%;'>
+			          	<article class='markdown-body'>
+			            	<style>.highlight .hll { background-color: #ffffcc }
+.highlight  { background: #f0f0f0; }
+.highlight .c { color: #60a0b0; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #007020; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .cm { color: #60a0b0; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #007020 } /* Comment.Preproc */
+.highlight .c1 { color: #60a0b0; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #60a0b0; background-color: #fff0f0 } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #c65d09; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .kc { color: #007020; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #007020; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #007020; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #007020 } /* Keyword.Pseudo */
+.highlight .kr { color: #007020; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #902000 } /* Keyword.Type */
+.highlight .m { color: #40a070 } /* Literal.Number */
+.highlight .s { color: #4070a0 } /* Literal.String */
+.highlight .na { color: #4070a0 } /* Name.Attribute */
+.highlight .nb { color: #007020 } /* Name.Builtin */
+.highlight .nc { color: #0e84b5; font-weight: bold } /* Name.Class */
+.highlight .no { color: #60add5 } /* Name.Constant */
+.highlight .nd { color: #555555; font-weight: bold } /* Name.Decorator */
+.highlight .ni { color: #d55537; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #007020 } /* Name.Exception */
+.highlight .nf { color: #06287e } /* Name.Function */
+.highlight .nl { color: #002070; font-weight: bold } /* Name.Label */
+.highlight .nn { color: #0e84b5; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #062873; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #bb60d5 } /* Name.Variable */
+.highlight .ow { color: #007020; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #40a070 } /* Literal.Number.Bin */
+.highlight .mf { color: #40a070 } /* Literal.Number.Float */
+.highlight .mh { color: #40a070 } /* Literal.Number.Hex */
+.highlight .mi { color: #40a070 } /* Literal.Number.Integer */
+.highlight .mo { color: #40a070 } /* Literal.Number.Oct */
+.highlight .sb { color: #4070a0 } /* Literal.String.Backtick */
+.highlight .sc { color: #4070a0 } /* Literal.String.Char */
+.highlight .sd { color: #4070a0; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #4070a0 } /* Literal.String.Double */
+.highlight .se { color: #4070a0; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #4070a0 } /* Literal.String.Heredoc */
+.highlight .si { color: #70a0d0; font-style: italic } /* Literal.String.Interpol */
+.highlight .sx { color: #c65d09 } /* Literal.String.Other */
+.highlight .sr { color: #235388 } /* Literal.String.Regex */
+.highlight .s1 { color: #4070a0 } /* Literal.String.Single */
+.highlight .ss { color: #517918 } /* Literal.String.Symbol */
+.highlight .bp { color: #007020 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #bb60d5 } /* Name.Variable.Class */
+.highlight .vg { color: #bb60d5 } /* Name.Variable.Global */
+.highlight .vi { color: #bb60d5 } /* Name.Variable.Instance */
+.highlight .il { color: #40a070 } /* Literal.Number.Integer.Long */</style>
+<h1>鱿鱼旅行接口文档</h1>
+
+<p><img src="http://www.lagou.com/image1/M00/30/15/Cgo8PFWGN3aAd3HBAABw7dGzAgI393.jpg" alt="鱿鱼" title="鱿鱼"></p>
+
+<h2>更改备注</h2>
+
+<table><thead>
+<tr>
+<th>时间</th>
+<th style="text-align: center">更改人</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>2015-11-20</td>
+<td style="text-align: center">方锦文</td>
+<td style="text-align: center">整理鱿鱼现有34个接口</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+</tbody></table>
+
+<h2>ReadMe!!!!ReadMe!!!!ReadMe!!!!</h2>
+<div class="highlight"><pre><span class="err">说明</span><span class="o">:</span>
+<span class="w">    </span><span class="il">1</span><span class="p">,</span><span class="err">地址</span><span class="w"> </span><span class="nl">https:</span><span class="o">//</span><span class="vg">api</span><span class="o">.</span><span class="vg">shenji</span><span class="o">.</span><span class="vg">me</span>
+<span class="w">    </span><span class="il">2</span><span class="p">,</span><span class="err">在</span><span class="vg">HTTP</span><span class="w"> </span><span class="vg">HEADER</span><span class="w"> </span><span class="err">中写入</span>
+<span class="w">        </span><span class="vg">if</span><span class="w"> </span><span class="err">用户相关</span>
+<span class="w">           </span><span class="nl">Authorization:</span><span class="w"> </span><span class="vg">bearer</span><span class="o">+</span><span class="vg">tooken</span>
+<span class="w">        </span><span class="vg">else</span>
+<span class="w">           </span><span class="nl">Authorization:</span><span class="w"> </span><span class="vg">basic</span><span class="o">+</span><span class="vg">base64</span><span class="p">((</span><span class="nl">cliendid:</span><span class="vg">cliendvaluver</span><span class="p">)</span><span class="o">.</span><span class="vg">bytes</span><span class="p">)</span>
+<span class="w">           </span><span class="err">非用户相关的接口只有</span><span class="w"> </span><span class="p">(</span><span class="vg">token</span><span class="p">,</span><span class="vg">requestSmsCode</span><span class="p">,</span><span class="vg">verifySmsCode</span><span class="p">,</span><span class="vg">user</span><span class="p">(</span><span class="err">注册</span><span class="p">))</span>
+<span class="w">    </span><span class="il">3</span><span class="p">,</span><span class="o">/</span><span class="vg">service</span><span class="o">/</span><span class="w">     </span><span class="vg">verifySmsCode</span><span class="o">/</span><span class="p">{</span><span class="vg">smsCode</span><span class="p">}</span><span class="w">  </span><span class="p">{}</span><span class="w"> </span><span class="err">中括号中为地址拼接</span><span class="w">  </span>
+<span class="w">      </span><span class="vg">post&amp;patch&amp;put</span><span class="err">传递内容为</span><span class="vg">body</span><span class="err">中为</span><span class="vg">json</span><span class="err">字符串</span>
+<span class="w">      </span><span class="vg">get</span><span class="err">为</span><span class="o">?&amp;=</span><span class="err">拼接内容</span>
+<span class="w">    </span><span class="il">4</span><span class="p">,</span><span class="err">接口分为</span>
+<span class="w">            </span><span class="vg">post</span><span class="w"> </span><span class="err">增加数据</span>
+<span class="w">            </span><span class="vg">get</span><span class="w">  </span><span class="err">浏览数据</span>
+<span class="w">            </span><span class="vg">delete</span><span class="w">  </span><span class="err">数据数据</span>
+<span class="w">            </span><span class="vg">patch</span><span class="w">   </span><span class="err">修改数据</span>
+<span class="w">            </span><span class="vg">put</span><span class="w">     </span><span class="err">修改数据</span>
+<span class="w">    </span><span class="il">5</span><span class="p">,</span><span class="err">一般都为必须字段</span><span class="p">,</span><span class="err">除非特需备注</span>
+</pre></div>
+<h2>HTTP自定义状态码</h2>
+
+<table><thead>
+<tr>
+<th>状态码</th>
+<th style="text-align: center">结果</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td style="text-align: center">成功</td>
+</tr>
+<tr>
+<td>404</td>
+<td style="text-align: center">服务器把他弄丢了~</td>
+</tr>
+<tr>
+<td>202</td>
+<td style="text-align: center"></td>
+</tr>
+</tbody></table>
+
+<h2>APP系统获取</h2>
+
+<h3>注册app</h3>
+
+<blockquote>
+<p>@POST(&quot;/installation&quot;)</p>
+</blockquote>
+
+<p>request</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>device_type</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">Android和ios</td>
+</tr>
+<tr>
+<td>device_ident</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">设备id</td>
+</tr>
+</tbody></table>
+
+<p>response </p>
+<div class="highlight"><pre><span class="n">code</span><span class="o">:</span><span class="mi">201</span>
+</pre></div>
+<h3>获取验证码</h3>
+
+<blockquote>
+<p>@POST(&quot;/service/requestSmsCode&quot;)</p>
+</blockquote>
+
+<p>request</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mobilePhoneNumber</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">电话号码</td>
+</tr>
+</tbody></table>
+
+<p>response</p>
+
+<h3>校验验证码</h3>
+
+<blockquote>
+<p>@POST(&quot;/service/verifySmsCode/{smsCode}&quot;)验证码</p>
+
+<p>mobilePhoneNumber以get拼接后面</p>
+</blockquote>
+
+<p>request</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mobilePhoneNumber</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">电话号码</td>
+</tr>
+</tbody></table>
+
+<p>response</p>
+
+<h2>用户中心</h2>
+
+<h3>得到token</h3>
+
+<blockquote>
+<p>@POST(&quot;/auth/token&quot;)</p>
+
+<p>提交类容为 x-www-form-urlencoded格式</p>
+</blockquote>
+
+<p>request</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>grant_type</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">类型默认 password</td>
+</tr>
+<tr>
+<td>username</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">用户名</td>
+</tr>
+<tr>
+<td>password</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">密码</td>
+</tr>
+<tr>
+<td>device_ident</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">唯一标示</td>
+</tr>
+</tbody></table>
+
+<p>response</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>user_id</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">用户id</td>
+</tr>
+<tr>
+<td>access_token</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">鉴权</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">创建时间</td>
+</tr>
+<tr>
+<td>expires_in</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">过期时长</td>
+</tr>
+<tr>
+<td>id</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td>refresh_token</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">刷新鉴权</td>
+</tr>
+<tr>
+<td>installation_id</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center"></td>
+</tr>
+</tbody></table>
+
+<h3>提交注册</h3>
+
+<blockquote>
+<p>@POST(&quot;/user&quot;)</p>
+</blockquote>
+
+<p>request</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mobile_phone_number</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">电话号码</td>
+</tr>
+<tr>
+<td>password</td>
+<td style="text-align: center">String</td>
+<td style="text-align: center">密码</td>
+</tr>
+<tr>
+<td>nickname</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">名称</td>
+</tr>
+</tbody></table>
+
+<p>response</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mobile_phone_number</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">手机号码</td>
+</tr>
+<tr>
+<td>nickname</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">昵称</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">创建时间</td>
+</tr>
+<tr>
+<td>id</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">用户id</td>
+</tr>
+</tbody></table>
+
+<h3>得到用户信息</h3>
+
+<blockquote>
+<p>@GET(&quot;/user/me&quot;)</p>
+</blockquote>
+
+<p>request</p>
+
+<p>response</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mobile_phone_number</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">电话号码</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">创建时间</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">更新时间</td>
+</tr>
+<tr>
+<td>avatar</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">用户头像</td>
+</tr>
+<tr>
+<td>nickname</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">用户昵称</td>
+</tr>
+<tr>
+<td>id</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">用户id</td>
+</tr>
+</tbody></table>
+
+<h3>更新头像</h3>
+
+<blockquote>
+<p>@PUT(&quot;/user/{userId}/avatar&quot;) 用户id</p>
+</blockquote>
+
+<p>request</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td style="text-align: center">File</td>
+<td style="text-align: center">二进制文件</td>
+</tr>
+</tbody></table>
+
+<p>response</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>updated_at</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">更新时间</td>
+</tr>
+</tbody></table>
+
+<h3>我的收藏</h3>
+
+<blockquote>
+<p>@GET(&quot;/user/me/collection&quot;)</p>
+</blockquote>
+
+<p>request</p>
+
+<p>response</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>product</td>
+<td style="text-align: center">product</td>
+<td style="text-align: center">路线产品</td>
+</tr>
+<tr>
+<td>type</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">p:个人游 g:团体游</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td>user_id</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td>product_id</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">产品id</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>product</p>
+</blockquote>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>cover_image</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">显示图片</td>
+</tr>
+<tr>
+<td>name</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">收藏名称</td>
+</tr>
+<tr>
+<td>summary</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">收藏简介</td>
+</tr>
+</tbody></table>
+
+<h3>删除收藏</h3>
+
+<blockquote>
+<p>@DELETE(&quot;/user/me/collection/{id}&quot;) 收藏id</p>
+</blockquote>
+
+<p>request</p>
+
+<p>response</p>
+
+<h3>添加收藏</h3>
+
+<blockquote>
+<p>@POST(&quot;/user/me/collection&quot;)</p>
+</blockquote>
+
+<p>request</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>type</td>
+<td style="text-align: center">类型</td>
+<td style="text-align: center">p:个人游 g:团体游</td>
+</tr>
+<tr>
+<td>product_id</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">产品id</td>
+</tr>
+</tbody></table>
+
+<p>response</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>type</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">p:个人游 g:团体游</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td>user_id</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td>product_id</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">产品id</td>
+</tr>
+<tr>
+<td>id</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">收藏id</td>
+</tr>
+</tbody></table>
+
+<h2>群组</h2>
+
+<h3>创建群组</h3>
+
+<blockquote>
+<p>@POST(&quot;/group&quot;)</p>
+</blockquote>
+
+<p>request</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">群组名</td>
+</tr>
+<tr>
+<td>intro</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">群组简介</td>
+</tr>
+</tbody></table>
+
+<p>response</p>
+<div class="highlight"><pre><span class="n">code</span><span class="o">:</span><span class="mi">201</span>
+</pre></div>
+<h3>得到群组详情</h3>
+
+<blockquote>
+<p>/group/{groupId}&quot;) 群组id</p>
+</blockquote>
+
+<p>request</p>
+
+<p>response</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>is_need_verify</td>
+<td style="text-align: center">boolean</td>
+<td style="text-align: center">ture:加入需要验证;false:不需要验证</td>
+</tr>
+<tr>
+<td>name</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">群名称</td>
+</tr>
+<tr>
+<td>is_member</td>
+<td style="text-align: center">boolean</td>
+<td style="text-align: center">true:是该群群员;false:不是</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">创建时间</td>
+</tr>
+<tr>
+<td>group_number</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">群组号码</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">更新时间</td>
+</tr>
+<tr>
+<td>owner</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">群主人的id</td>
+</tr>
+<tr>
+<td>intro</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">简介</td>
+</tr>
+<tr>
+<td>converstaion_id</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">avos里面的相关id</td>
+</tr>
+<tr>
+<td>is_public</td>
+<td style="text-align: center">boolean</td>
+<td style="text-align: center">true:公开;false:私有</td>
+</tr>
+<tr>
+<td>id</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">群id</td>
+</tr>
+</tbody></table>
+
+<h3>更新群组头像</h3>
+
+<blockquote>
+<p>@PUT(&quot;/group/{groupId}/cover&quot;)&quot; 群组id</p>
+</blockquote>
+
+<p>request</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td style="text-align: center">File</td>
+<td style="text-align: center">二进制文件 image/jpeg</td>
+</tr>
+</tbody></table>
+
+<p>response</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>updated_at</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">跟新时间</td>
+</tr>
+</tbody></table>
+
+<h3>我加入的群组列表</h3>
+
+<blockquote>
+<p>@GET(&quot;/user/me/group&quot;)</p>
+</blockquote>
+
+<p>request</p>
+
+<p>response</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>is_need_verify</td>
+<td style="text-align: center">boolean</td>
+<td style="text-align: center">ture:加入需要验证;false:不需要验证</td>
+</tr>
+<tr>
+<td>name</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">群名称</td>
+</tr>
+<tr>
+<td>is_member</td>
+<td style="text-align: center">boolean</td>
+<td style="text-align: center">true:是该群群员;false:不是</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">创建时间</td>
+</tr>
+<tr>
+<td>group_number</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">群组号码</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">更新时间</td>
+</tr>
+<tr>
+<td>owner</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">群主人的id</td>
+</tr>
+<tr>
+<td>intro</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">简介</td>
+</tr>
+<tr>
+<td>cover</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">图片</td>
+</tr>
+<tr>
+<td>is_public</td>
+<td style="text-align: center">boolean</td>
+<td style="text-align: center">true:公开;false:私有</td>
+</tr>
+<tr>
+<td>id</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">群id</td>
+</tr>
+</tbody></table>
+
+<h3>查询群组</h3>
+
+<blockquote>
+<p>@GET(&quot;/group/search&quot;)</p>
+</blockquote>
+
+<p>request</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>query</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">搜索字段</td>
+</tr>
+</tbody></table>
+
+<p>response</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">群id</td>
+</tr>
+<tr>
+<td>is_member</td>
+<td style="text-align: center">boolean</td>
+<td style="text-align: center">true:是该群群员;false:不是</td>
+</tr>
+<tr>
+<td>name</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">群名称</td>
+</tr>
+<tr>
+<td>owner</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">群主人的id</td>
+</tr>
+<tr>
+<td>intro</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">简介</td>
+</tr>
+<tr>
+<td>is_need_verify</td>
+<td style="text-align: center">boolean</td>
+<td style="text-align: center">ture:加入需要验证;false:不需要验证</td>
+</tr>
+<tr>
+<td>is_member</td>
+<td style="text-align: center">boolean</td>
+<td style="text-align: center">ture:本群成员;false:不是</td>
+</tr>
+<tr>
+<td>conversation_id</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">avos相关id</td>
+</tr>
+<tr>
+<td>image</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">图片</td>
+</tr>
+</tbody></table>
+
+<h3>申请入群</h3>
+
+<blockquote>
+<p>@POST(&quot;/group/{groupId}/member&quot;) 群组id</p>
+</blockquote>
+
+<p>request</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>message</td>
+<td style="text-align: center">String</td>
+<td style="text-align: center">入群理由</td>
+</tr>
+</tbody></table>
+
+<p>response</p>
+
+<h3>获取我的入群请求</h3>
+
+<blockquote>
+<p>@GET(&quot;/user/me/group/join-request&quot;)</p>
+</blockquote>
+
+<p>request</p>
+
+<p>response</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>user_id</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">用户id</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">创建时间</td>
+</tr>
+<tr>
+<td>group_name</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">群组名称</td>
+</tr>
+<tr>
+<td>user</td>
+<td style="text-align: center">user</td>
+<td style="text-align: center">申请用户</td>
+</tr>
+<tr>
+<td>message</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">申请理由</td>
+</tr>
+<tr>
+<td>group_id</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">群组id</td>
+</tr>
+<tr>
+<td>id</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">申请id</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>user</p>
+</blockquote>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mobile_phone_number</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">用户手机时间</td>
+</tr>
+<tr>
+<td>nickname</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">昵称</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">创建时间</td>
+</tr>
+<tr>
+<td>id</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">用户id</td>
+</tr>
+</tbody></table>
+
+<h3>处理入群请求</h3>
+
+<blockquote>
+<p>@PATCH(&quot;/group/{groupId}/join-request/{applyId}&quot;)  群组id</p>
+</blockquote>
+
+<p>request</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>status</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">accepted 同意</td>
+</tr>
+</tbody></table>
+
+<p>response</p>
+
+<h3>获取群组想去的列表</h3>
+
+<blockquote>
+<p>@GET(&quot;/group/{groupId}/like&quot;)    群组id</p>
+</blockquote>
+
+<p>request</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>status</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">1,2,3,对应的住宿 餐饮 娱乐 炸了~</td>
+</tr>
+</tbody></table>
+
+<p>response</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>plan</td>
+<td style="text-align: center">array plan</td>
+<td style="text-align: center">炸了</td>
+</tr>
+<tr>
+<td>like</td>
+<td style="text-align: center">array</td>
+<td style="text-align: center">炸了</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>plan</p>
+</blockquote>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">炸了</td>
+</tr>
+</tbody></table>
+
+<h3>获取支持的目的地</h3>
+
+<blockquote>
+<p>@GET(&quot;/region&quot;)</p>
+</blockquote>
+
+<p>request</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>location</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">城市编码(高德里面的编码)</td>
+</tr>
+</tbody></table>
+
+<p>response</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>code</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">省id</td>
+</tr>
+<tr>
+<td>name</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">省名字</td>
+</tr>
+<tr>
+<td>city</td>
+<td style="text-align: center">array city</td>
+<td style="text-align: center">下面的市级</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>city</p>
+</blockquote>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>code</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">市id</td>
+</tr>
+<tr>
+<td>name</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">市名字</td>
+</tr>
+</tbody></table>
+
+<h3>创建空线路或者根据团体游线路拷贝</h3>
+
+<blockquote>
+<p>@POST(&quot;/group/{groupId}/plan&quot;)  群组路线</p>
+</blockquote>
+
+<p>request</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>destination</td>
+<td style="text-align: center">json</td>
+<td style="text-align: center">值为jsonarray</td>
+</tr>
+</tbody></table>
+
+<p>response</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>created_at</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">创建时间</td>
+</tr>
+<tr>
+<td>destination</td>
+<td style="text-align: center">array</td>
+<td style="text-align: center">出发地</td>
+</tr>
+<tr>
+<td>group_id</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">群组id</td>
+</tr>
+<tr>
+<td>id</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">路线id</td>
+</tr>
+</tbody></table>
+
+<h3>保存线路信息</h3>
+
+<blockquote>
+<p>@PUT(&quot;/group/{groupId}/plan/{planId}/schedule&quot;) 路线id </p>
+</blockquote>
+
+<p>request</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td style="text-align: center">jsonarry</td>
+<td style="text-align: center">jsonobject为 sendscheule</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>sendscheule:</p>
+</blockquote>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>day</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td>poi</td>
+<td style="text-align: center">jsonarry int</td>
+<td style="text-align: center"></td>
+</tr>
+</tbody></table>
+
+<p>response</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>炸的</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+</tbody></table>
+
+<h3>获取POI项目所有信息</h3>
+
+<blockquote>
+<p>@GET(&quot;/poi/{id}&quot;)</p>
+</blockquote>
+
+<p>request</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>category</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td>plan</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center"></td>
+</tr>
+</tbody></table>
+
+<p>response</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>description</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">介绍</td>
+</tr>
+<tr>
+<td>address</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">地址</td>
+</tr>
+<tr>
+<td>id</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">项目id</td>
+</tr>
+<tr>
+<td>name</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">项目名称</td>
+</tr>
+<tr>
+<td>summary</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">简介</td>
+</tr>
+</tbody></table>
+
+<h3>获取POI项目详情</h3>
+
+<blockquote>
+<p>@GET(&quot;/poi/{id}&quot;)</p>
+</blockquote>
+
+<p>request</p>
+
+<p>response</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>created_at</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">创建时间</td>
+</tr>
+<tr>
+<td>notice</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">公告</td>
+</tr>
+<tr>
+<td>region_code</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">区域id</td>
+</tr>
+<tr>
+<td>description</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">介绍</td>
+</tr>
+<tr>
+<td>summary</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">简介</td>
+</tr>
+<tr>
+<td>region</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">区域</td>
+</tr>
+<tr>
+<td>facilities</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">景点设施</td>
+</tr>
+<tr>
+<td>address</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">景点地址</td>
+</tr>
+<tr>
+<td>id</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">景点id</td>
+</tr>
+<tr>
+<td>category_id</td>
+<td style="text-align: center">id</td>
+<td style="text-align: center">种类id</td>
+</tr>
+<tr>
+<td>name</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">景点名称</td>
+</tr>
+</tbody></table>
+
+<h3>发布公告</h3>
+
+<blockquote>
+<p>@POST(&quot;/group/{groupId}/bulletin&quot;) 群id </p>
+</blockquote>
+
+<p>request</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>content</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">公告内容</td>
+</tr>
+</tbody></table>
+
+<p>response</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>炸的</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+</tbody></table>
+
+<h3>获取群成员</h3>
+
+<blockquote>
+<p>@GET(&quot;/group/{groupId}/member&quot;)群id </p>
+</blockquote>
+
+<p>request</p>
+
+<p>response</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mobile_phone_number</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">手机号码</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">更新时间</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">创建时间</td>
+</tr>
+<tr>
+<td>avatar</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">头像</td>
+</tr>
+<tr>
+<td>nickname</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">成员昵称</td>
+</tr>
+<tr>
+<td>is_owner</td>
+<td style="text-align: center">boolean</td>
+<td style="text-align: center">true:群主人;false:成员</td>
+</tr>
+<tr>
+<td>id</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">成员id</td>
+</tr>
+</tbody></table>
+
+<h2>团体&amp;个人游~</h2>
+
+<h3>团体&amp;个人游列表</h3>
+
+<blockquote>
+<p>@GET(&quot;/product&quot;)</p>
+</blockquote>
+
+<p>request</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>category</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">1:团体游,2:个人游</td>
+</tr>
+<tr>
+<td>subcategory</td>
+<td style="text-align: center">boolean</td>
+<td style="text-align: center">默认true</td>
+</tr>
+<tr>
+<td>per_page</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">分页大小</td>
+</tr>
+<tr>
+<td>page</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">当前页</td>
+</tr>
+<tr>
+<td>region</td>
+<td style="text-align: center">String</td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td>latest_date</td>
+<td style="text-align: center">String</td>
+<td style="text-align: center">最近出游时间</td>
+</tr>
+<tr>
+<td>price</td>
+<td style="text-align: center">float</td>
+<td style="text-align: center">价钱</td>
+</tr>
+</tbody></table>
+
+<p>response</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>cover_image</td>
+<td style="text-align: center">String</td>
+<td style="text-align: center">图片</td>
+</tr>
+<tr>
+<td>summary</td>
+<td style="text-align: center">String</td>
+<td style="text-align: center">简介</td>
+</tr>
+<tr>
+<td>id</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">id</td>
+</tr>
+<tr>
+<td>name</td>
+<td style="text-align: center">String</td>
+<td style="text-align: center">标题</td>
+</tr>
+</tbody></table>
+
+<h3>团体游&amp;个人游路线详情</h3>
+
+<blockquote>
+<p>@GET(&quot;/product/{itineraryId}&quot;) 路线详情id</p>
+</blockquote>
+
+<p>request</p>
+
+<p>response</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>latest_date</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">最后出团时间</td>
+</tr>
+<tr>
+<td>name</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">路线名称</td>
+</tr>
+<tr>
+<td>introduction</td>
+<td style="text-align: center">introduction</td>
+<td style="text-align: center">旅游路线</td>
+</tr>
+<tr>
+<td>price</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">价格</td>
+</tr>
+<tr>
+<td>summary</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">简介</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">创建时间</td>
+</tr>
+<tr>
+<td>itinerary</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">行程安排</td>
+</tr>
+<tr>
+<td>id</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td>extra</td>
+<td style="text-align: center">extra</td>
+<td style="text-align: center">扩展信息</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>introduction</p>
+</blockquote>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>notice</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">旅游须知</td>
+</tr>
+<tr>
+<td>name</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">标题</td>
+</tr>
+<tr>
+<td>departure_place</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">出发地</td>
+</tr>
+<tr>
+<td>introduction</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">简介</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">创建时间</td>
+</tr>
+<tr>
+<td>destination</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">目的地</td>
+</tr>
+<tr>
+<td>summary</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">摘要</td>
+</tr>
+<tr>
+<td>fee_explanation</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">费用说明</td>
+</tr>
+<tr>
+<td>id</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td>more_info</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">更多信息</td>
+</tr>
+<tr>
+<td>tags</td>
+<td style="text-align: center">array</td>
+<td style="text-align: center">旅游标签</td>
+</tr>
+<tr>
+<td>details</td>
+<td style="text-align: center">array details</td>
+<td style="text-align: center">每天行程</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<blockquote>
+<p>details</p>
+</blockquote>
+</blockquote>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>description</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">描述</td>
+</tr>
+<tr>
+<td>day</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">完多少天</td>
+</tr>
+<tr>
+<td>subject</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">路线</td>
+</tr>
+<tr>
+<td>items</td>
+<td style="text-align: center">array items</td>
+<td style="text-align: center">路线id</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<blockquote>
+<blockquote>
+<p>items</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>description</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">细分路线描述</td>
+</tr>
+<tr>
+<td>title</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">细分路线标题</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>extra</p>
+</blockquote>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td>created_at</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">创建时间</td>
+</tr>
+<tr>
+<td>attr</td>
+<td style="text-align: center">array attr</td>
+<td style="text-align: center">属性</td>
+</tr>
+<tr>
+<td>product_id</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">产品id</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<blockquote>
+<p>attr</p>
+</blockquote>
+</blockquote>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>itinerary_id</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">路线id</td>
+</tr>
+</tbody></table>
+
+<h3>获取热门城市</h3>
+
+<blockquote>
+<p>@GET(&quot;/hotcity&quot;)</p>
+</blockquote>
+
+<p>request</p>
+
+<p>response</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>region</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">地域范围</td>
+</tr>
+<tr>
+<td>image</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">图片</td>
+</tr>
+<tr>
+<td>title</td>
+<td style="text-align: center">String</td>
+<td style="text-align: center">标题</td>
+</tr>
+</tbody></table>
+
+<h3>首页推荐</h3>
+
+<blockquote>
+<p>@GET(&quot;/product/recommend&quot;)</p>
+</blockquote>
+
+<p>request</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>limit</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">获取多少个推荐</td>
+</tr>
+</tbody></table>
+
+<p>response</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>summary</td>
+<td style="text-align: center">String</td>
+<td style="text-align: center">简介</td>
+</tr>
+<tr>
+<td>id</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">id</td>
+</tr>
+<tr>
+<td>name</td>
+<td style="text-align: center">String</td>
+<td style="text-align: center">标题</td>
+</tr>
+</tbody></table>
+
+<h2>订单</h2>
+
+<h3>产品出游日期和价格</h3>
+
+<blockquote>
+<p>@GET(&quot;/product/{productId}/date&quot;)  产品id</p>
+</blockquote>
+
+<p>request</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>start_date</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">yyyy-MM-dd</td>
+</tr>
+<tr>
+<td>end_date</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">yyyy-MM-dd</td>
+</tr>
+</tbody></table>
+
+<p>response</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>date</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">出团时间</td>
+</tr>
+<tr>
+<td>price</td>
+<td style="text-align: center">array price</td>
+<td style="text-align: center">团的价格和信息</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>price</p>
+</blockquote>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>option_name</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">套餐名称</td>
+</tr>
+<tr>
+<td>price</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">价格</td>
+</tr>
+<tr>
+<td>option_id</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center"></td>
+</tr>
+</tbody></table>
+
+<h3>提交订单</h3>
+
+<blockquote>
+<p>@POST(&quot;/order&quot;) </p>
+</blockquote>
+
+<p>request</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>product_id</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">产品id</td>
+</tr>
+<tr>
+<td>product_date</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">yyyy-MM-dd</td>
+</tr>
+</tbody></table>
+
+<p>response</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>order_number</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">订单编号</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">创建时间</td>
+</tr>
+<tr>
+<td>user_id</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">用户id</td>
+</tr>
+</tbody></table>
+
+<h3>得到我的订单</h3>
+
+<blockquote>
+<p>@GET(&quot;/user/me/order&quot;)</p>
+</blockquote>
+
+<p>request</p>
+
+<p>response</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>order_number</td>
+<td style="text-align: center">String</td>
+<td style="text-align: center">订单编号</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td style="text-align: center">String</td>
+<td style="text-align: center">创建时间</td>
+</tr>
+<tr>
+<td>user_id</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">用户id</td>
+</tr>
+<tr>
+<td>id</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">订单id</td>
+</tr>
+<tr>
+<td>product_id</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">产品id</td>
+</tr>
+</tbody></table>
+
+<h3>订单支付</h3>
+
+<blockquote>
+<p>@POST(&quot;/order/{orderId}/payment&quot;) 订单id</p>
+</blockquote>
+
+<p>request</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>channel</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">支付通道 wechat_app</td>
+</tr>
+</tbody></table>
+
+<p>response</p>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>user_id</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">用户id</td>
+</tr>
+<tr>
+<td>order_id</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">订单编号</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">创建时间</td>
+</tr>
+<tr>
+<td>amount</td>
+<td style="text-align: center">double</td>
+<td style="text-align: center">价格</td>
+</tr>
+<tr>
+<td>payment_number</td>
+<td style="text-align: center">String</td>
+<td style="text-align: center">支付编号</td>
+</tr>
+<tr>
+<td>id</td>
+<td style="text-align: center">int</td>
+<td style="text-align: center">订单id</td>
+</tr>
+<tr>
+<td>channel</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center">支付通道 &quot;wechat_app&quot;</td>
+</tr>
+<tr>
+<td>payment_platform_data</td>
+<td style="text-align: center">payment_platform_data</td>
+<td style="text-align: center">支付平台信息</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>payment_platform_data</p>
+</blockquote>
+
+<table><thead>
+<tr>
+<th>字段</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: center">备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>timestamp</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td>sign</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td>partnerid</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td>appid</td>
+<td style="text-align: center">String</td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td>prepayid</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td>noncestr</td>
+<td style="text-align: center">string</td>
+<td style="text-align: center"></td>
+</tr>
+</tbody></table>
+
+			          	</article>
+			        </div>
+					</div>
+	      </body>
+	    </html>
+			<script type="text/javascript" src="toc/js/jquery-1.4.4.min.js"></script>
+			<script type="text/javascript" src="toc/js/jquery.ztree.all-3.5.min.js"></script>
+			<script type="text/javascript" src="toc/js/ztree_toc.js"></script>
+      <script type="text/javascript" src="toc/toc_conf.js"></script>
+      
+			<SCRIPT type="text/javascript" >
+			<!--
+			$(document).ready(function(){
+          var css_conf = eval(markdown_panel_style);
+          $('#readme').css(css_conf)
+          
+          var conf = eval(jquery_ztree_toc_opts);
+  				$('#tree').ztree_toc(conf);
+
+				
+			});
+			//-->
+			</SCRIPT>
+	  
