@@ -60,7 +60,7 @@
 
 | 字段        | 类型           |备注|
 | ------------- |:-------------:|:-------------:|
-|  sku   |string |  |
+|  sku   |string |  事例 "1:1;2:3"   1:为时间 date_rule id 2:套餐类型 spec -> items id  |
 |  product_id   |string |  该产品线路id |
 |  price   |float |套餐价格   |
 |  updated_at   |string |   |
@@ -89,7 +89,7 @@
 | 字段        | 类型           |备注|
 | ------------- |:-------------:|:-------------:|
 |  images   | array<string> | 项目图片数组 |
-|  type   | int | 项目类型1:景点,2:娱乐,3:住宿,4:餐饮 |
+|  type   | int | 项目类型 1:景点,2:娱乐,3:住宿,4:餐饮|
 |    description  | string |  项目类型说明 |
 |    resource_id  | int |  资源id |
 
