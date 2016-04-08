@@ -89,7 +89,7 @@
 | 字段        | 类型           |备注|
 | ------------- |:-------------:|:-------------:|
 |  images   | array<string> | 项目图片数组 |
-|  type   | int | 项目类型 |
+|  type   | int | 项目类型1:景点,2:娱乐,3:住宿,4:餐饮 |
 |    description  | string |  项目类型说明 |
 |    resource_id  | int |  资源id |
 
