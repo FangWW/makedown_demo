@@ -1,4 +1,4 @@
-##makedown生成 带侧边title网页的页面
+##makedown生成 带侧边title网页的命令
   sudo tocmd_conf -f Documents/小标题.md 
 
 大标题
