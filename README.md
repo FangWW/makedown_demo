@@ -1,4 +1,5 @@
-##makedown生成 带侧边title网页的命令
+## makedown生成 带侧边title网页的命令
+
   sudo tocmd_conf -f Documents/小标题.md 
 
 
@@ -47,12 +48,11 @@
 1.[点击这里你可以链接到www.google.com](http://www.google.com)<br />
 2.[点击这里我你可以链接到我的博客](https://github.com/FangWW/)<br />
 
-###只是显示图片
+### 只是显示图片
 ![github](https://avatars2.githubusercontent.com/u/5373096?v=3&s=48 "github")
 
-###想点击某个图片进入一个网页,比如我想点击github的icorn然后再进入www.github.com
-[![image]](http://www.github.com/)
-[image]: https://avatars3.githubusercontent.com/u/9919?v=3&s=200 "github"
+### 想点击某个图片进入一个网页,比如我想点击github的icorn然后再进入www.github.com
+[![github](https://avatars3.githubusercontent.com/u/9919?v=3&s=200 "github")](http://www.github.com/)
 
 ### 文字被些字符包围
 > 文字被些字符包围
